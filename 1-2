@@ -1,0 +1,174 @@
+Program teryg;
+var a, b, c: integer;
+begin
+  writeln ('введите стороны треугольника');
+  readln (a, b, c);
+  If (a+b>c) and (b+c>a) and (a+c>b) 
+  then writeln ('треугольник с такими сторонами существует')
+  else writeln ('треугольника с такими сторонами не существует')
+  end.
+Program yr;
+var a,b:integer;
+begin
+  Writeln('Введите переменные'); 
+  Readln(a,b);
+  if a<>0 then
+    if (b mod a)=0 then Writeln(-b div a) else Writeln('NO')
+  else
+    if b=0 then Writeln('INF') else Writeln('NO')
+end.
+
+Program gipotenyza;
+var c, a, b: real;
+begin
+  writeln ('введите длины катетов треугольника');
+  readln (a, b);
+  c:=sqrt(sqr(a)+sqr(b));
+  writeln ('гипотенуза треугольника равна', c:0:2);
+end.
+Program srlinia;
+var a, b, m: real;
+begin
+  writeln ('введите длины оснований трапеции');
+  readln (a, b);
+  m:=(a+b)/2;
+  writeln ('средняя линия трапеции равна ', m:0:2);
+end.
+Program cifri;
+var a, b, a1, b1: integer;
+begin
+  writeln ('введите трёхзначное число');
+  readln (a);
+  a1:=a div 100;
+  writeln ('введите четырёхзначное число');
+  readln (b);
+  b1:=b div 1000;
+  writeln ('первая цифра трёхзначного числа - ', a1);
+  writeln ('первая цифра четырёхзначного числа - ', b1);
+end.
+Program jj;
+var a, s, p, i, k, l, m: integer;
+begin
+  writeln ('введите четырехзначное число');
+  readln (a);
+  i:=a div 1000;
+  k:=(a div 100) mod 10;
+  l:=(a mod 100) div 10;
+  m:=a mod 10;
+  s:=i+k+l+m;
+  p:=i*k*l*m;
+  writeln ('Сумма цифр числа равна ', s, ', а произведение равно ', p);
+end.
+Program raz;
+var a, r, b, x, y, z: integer;
+begin
+  writeln ('введите трехзначное число');
+  readln (a);
+  x:=a div 100;
+  y:=(a div 10) mod 10;
+  z:=a mod 10;
+  b:=((z*100) + (y*10) + x);
+  writeln (b);
+  r:=a-b;
+  writeln (r);
+end.
+Program per;
+var a, x, y, z, b:integer;
+begin
+  writeln ('введите трехзначное число');
+  readln (a);
+  x:=a div 100;
+  y:=(a div 10) mod 10;
+  z:=a mod 10;
+  b:=((z*100)+(y*10)+x);
+  writeln (b);
+end.
+Program minim;
+var a, b, c, min:integer;
+Begin
+  writeln ('введите три числа');
+  readln (a, b, c);
+  min:=a;
+  if min>b then min:=b;
+  if min>c then min:=c;
+  writeln ('наименьшее из них ', min);
+end.
+Program polozh;
+var a, b, c, n:integer;
+begin
+  writeln ('введите три числа');
+  n:=0;
+  readln (a, b, c);
+  if a>0 then n:=n+1;
+  if b>0 then n:=n+1;
+  if c>0 then n:=n+1;
+  writeln ('количество положительных чисел: ', n);
+end.
+Program kk;
+var n: integer;
+begin
+  writeln ('введите год');
+  readln (n);
+  if n mod 4 = 0 then writeln (n, ' год високосный')
+  else writeln (n, ' год не високосный');
+end.
+Program vozr;
+var a, b, c:integer;
+begin
+  writeln ('введите три числа');
+  readln (a, b, c);
+  if (a<b) and (a>c) and (c<b) then writeln (c,' ', a,' ', b)
+  else if (a>b) and (a<c) and (b<c) then writeln (b,' ', a,' ', c)
+  else if (b>a) and (b<c) and (a<c) then writeln (a,' ', b,' ', c)
+  else if (b<a) and (b>c) and (a>c) then writeln (c,' ', b,' ', a)
+  else if (c>a) and (c<b) and (a<b) then writeln (a,' ', c,' ', b)
+  else if (c<a) and (c>b) and (a>b) then writeln (b,' ', c,' ', a);
+end.
+Program lll;
+var a, k, l, m, n: integer;
+begin
+  writeln ('введите четырехзначное число');
+  read (a);
+  k:=a div 1000;
+  l:=(a div 100) mod 10;
+  m:=(a mod 100) div 10;
+  n:=a mod 10;
+  If (k=n) and (l=m) then writeln ('число является палиндромом') else writeln ('число не является палиндромом9')
+end.
+Program chet;
+var k, n, a, b, c:integer;
+begin
+  k:=0;
+  n:=0;
+  writeln ('введите три числа');
+  readln (a, b, c);
+  if a mod 2 = 0 then k:=k+1 else n:=n+1;
+  if b mod 2 = 0 then k:=k+1 else n:=n+1;
+  if c mod 2 = 0 then k:=k+1 else n:=n+1;
+  if (k >= 1) and (n >= 1) then writeln ('среди этих чисел есть и четное, и нечетное') 
+  else 
+    if k=3 
+    then writeln ('все эти числа четные')
+  else writeln ('все числа нечетные')
+end.
+Program sdacha;
+var a, b, c, d, e, f: integer;
+begin
+  writeln ('введите стоимость товара');
+  read (a, b);
+  writeln ('введите сумму, которую вы заплатили');
+  read (c, d);
+  e:=c-a;
+  f:=d-b;
+  if f>100 then
+    begin
+    e:=e+(f div 100);
+  f:=f mod 100;
+  end;
+  if b>d then 
+  begin
+    e:=e-1;
+    f:=100+f;
+  end;
+  writeln ('сдача составляет ', e, ' рублей и ', f, ' копеек')
+end.
